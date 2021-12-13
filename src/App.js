@@ -4,9 +4,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import SecretgardenMap from './Components/Map';
 
-function App() {
-  const [incidents, setIncidents] = useState([]);
-  
+function App() {  
 
   return (
     <div className="App">
