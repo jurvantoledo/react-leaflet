@@ -1,6 +1,5 @@
 import React from "react"
 import { MapContainer, TileLayer } from "react-leaflet";
-import {CRS} from 'leaflet';
 import "./Map.css"
 
 export default function SecretgardenMap() {
