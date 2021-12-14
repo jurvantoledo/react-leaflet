@@ -22,7 +22,7 @@
     position: absolute;
     background-position: center center;
     background-size: cover;
-    bottom: 63.5%;
+    bottom: 66.5%;
     animation: radijsAnimatie 1s infinite alternate linear
 }
 
@@ -80,10 +80,10 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 300px;
+    width: 350px;
     height: 300px;
     position: absolute;
-    bottom: 88.5%;
+    bottom: 87.5%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -126,4 +126,48 @@
     font-family: 'Cormorant Infant';
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+.component_4.wrapper {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+}
+
+.background_component_4 {
+    background-image: url(../../assets/bloem2.png);
+    background-position: center left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 460px;
+    height: 460px;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    transform: rotate(30deg);
+}
+
+.component_5.wrapper {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+}
+
+.background_component_5 {
+    background-image: url(../../assets/bloem3.png);
+    background-position: center left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: -40%;
+    right: -29%;
 }

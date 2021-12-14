@@ -59,6 +59,12 @@ export default function ComingSoonPage() {
                         </div>
                     </div>
                 </div>
+                <div className="component_4 wrapper">
+                    <div className="background_component_4" />
+                </div>
+                <div className="component_5 wrapper">
+                    <div className="background_component_5" />
+                </div>
             </div>
         </section>
         </>
