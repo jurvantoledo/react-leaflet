@@ -1,0 +1,129 @@
+// First section
+@keyframes radijsAnimatie {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(3deg);
+    }
+}
+
+.coming-soon-1 {
+    padding: 100px 0 225px;
+    position: relative;
+}
+
+.background_component_1 {
+    width: 500px;
+    height: 400px;
+    left: -75px;
+    background-image: url(../../assets/radijs.png);
+    z-index: 999;
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    bottom: 63.5%;
+    animation: radijsAnimatie 1s infinite alternate linear
+}
+
+.component_2.wrapper {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    top: 0;
+}
+
+.background_component_2 {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    background-image: url(../../assets/bloem1.png);
+    z-index: 999;
+    background-position: center right;
+    background-size: contain;
+    right: 0;
+    background-repeat: no-repeat;
+    transform: rotate(-45deg);
+    top: 30%;
+    overflow: hidden;
+}
+
+// Second section
+@keyframes pompoenAnimatie {
+    10%, 90% {
+        transform: translate(-1px, 0);
+    }
+
+    20%, 80% {
+        transform: translate(2px, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);    
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);    
+    }
+}
+
+.coming-soon-2 {
+    padding: 100px 0;
+    background-color: #eeefea;
+    position: relative;
+}
+
+.background_component_3 {
+    background-image: url(../../assets/pompoen.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 88.5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.background_component_3:hover {
+    animation: pompoenAnimatie 1s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+// First child
+.coming-soon-2 .col-md-6:first-child img {
+    height: 500px;
+    width: 325px;
+    object-fit: cover;
+}
+
+// Last child
+.coming-soon-2 .col-md-6:last-child .text-col {
+    padding-top: 15px;
+    padding-right: 150px;
+}
+
+.coming-soon-2 .col-md-6:last-child h2 {
+    font-size: 3rem;
+    color: #666797;
+    font-family: "Cormorant Infant";
+    margin: 0;
+}
+
+.coming-soon-2 .col-md-6:last-child form input {
+    width: 100%;
+    border: none;
+}
+
+.coming-soon-2 .col-md-6:last-child form button {
+    padding: 7px 40px;
+    background-color: #5b56b2;
+    color: #fff;
+    border: none;
+    font-family: 'Cormorant Infant';
+    font-weight: bold;
+    font-size: 1.1rem;
+}
