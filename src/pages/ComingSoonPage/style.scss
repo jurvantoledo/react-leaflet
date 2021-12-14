@@ -13,7 +13,15 @@
     position: relative;
 }
 
-.background_component_1 {
+.coming-soon-1 h2 {
+    color: #a8915d;
+    font-size: 4rem;
+    font-family: "Cormorant Infant";
+    margin: 2rem auto;
+}
+
+// background 1 a.k.a radijs
+.coming-soon-1 .background_component_1 {
     width: 500px;
     height: 400px;
     left: -75px;
@@ -22,11 +30,12 @@
     position: absolute;
     background-position: center center;
     background-size: cover;
-    bottom: 66.5%;
+    bottom: 70.5%;
     animation: radijsAnimatie 1s infinite alternate linear
 }
 
-.component_2.wrapper {
+// background 2 a.k.a bloem1
+.coming-soon-1 .component_2.wrapper {
     width: 500px;
     height: 400px;
     position: absolute;
@@ -35,7 +44,7 @@
     top: 0;
 }
 
-.background_component_2 {
+.coming-soon-1 .background_component_2 {
     width: 500px;
     height: 400px;
     position: absolute;
@@ -75,7 +84,8 @@
     position: relative;
 }
 
-.background_component_3 {
+// background 3 a.k.a pompoen
+.coming-soon-2 .background_component_3 {
     background-image: url(../../assets/pompoen.png);
     background-position: center center;
     background-size: cover;
@@ -128,7 +138,8 @@
     font-size: 1.1rem;
 }
 
-.component_4.wrapper {
+// background 4 a.k.a bloem 2
+.coming-soon-2 .component_4.wrapper {
     width: 500px;
     height: 400px;
     position: absolute;
@@ -137,7 +148,7 @@
     left: 0;
 }
 
-.background_component_4 {
+.coming-soon-2 .background_component_4 {
     background-image: url(../../assets/bloem2.png);
     background-position: center left;
     background-size: contain;
@@ -151,7 +162,8 @@
     transform: rotate(30deg);
 }
 
-.component_5.wrapper {
+// background 5 a.k.a bloem 3
+.coming-soon-2 .component_5.wrapper {
     width: 500px;
     height: 400px;
     position: absolute;
@@ -160,7 +172,7 @@
     right: 0;
 }
 
-.background_component_5 {
+.coming-soon-2 .background_component_5 {
     background-image: url(../../assets/bloem3.png);
     background-position: center left;
     background-size: cover;

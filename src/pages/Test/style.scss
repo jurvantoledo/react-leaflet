@@ -1,0 +1,17 @@
+.parallax-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secretgarden-button {
+    color: #fff;
+    background: transparent;
+    border: 1px solid green;
+    padding: 15px 50px;
+}
