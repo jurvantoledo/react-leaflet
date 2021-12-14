@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "./Map.css"
 
@@ -16,19 +16,26 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 export default function SecretgardenMap() {
     const position = [0.505, -0.09]
+    const [bounds, setBounds] = useState([
+        [5.712, -15.227],
+        [5.774, -15.125]
+    ])
 
     return (
         <MapContainer
-        className="markercluster-map"
-        center={[0.0, 0.0]}
-        maxZoom={5}
-        minZoom={2}
-        zoom={0}
-        continuousWorld={false}
-        id="secretgarden V1"
+            className="markercluster-map"
+            center={[0.0, 0.0]}
+            maxZoom={5}
+            minZoom={2}
+            zoom={0}
+            continuousWorld={false}
+            // maxBounds={bounds}
+            id="secretgarden V1"
+            style={{backgroundColor: "#fff"}}
         >
             <TileLayer
                 url={`maps/images/{z}/{x}/{y}.jpg`}
+                noWrap={true}
             />
             <Marker position={position}>
                 <Popup>

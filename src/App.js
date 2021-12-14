@@ -1,16 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
-import { useState } from 'react';
-import SecretgardenMap from './Components/Map';
+import ComingSoonPage from './pages/ComingSoonPage';
+import { Routes, Route } from "react-router-dom";
+import HomePage from './pages/HomePage';
 
 function App() {  
 
   return (
     <div className="App">
-      <h1>The map</h1>
-      <SecretgardenMap />
-      <p>More text</p>
+        <Routes>
+          <Route exact path='/home' element={<HomePage />} />
+          <Route exact path="/" element={<ComingSoonPage />} />      
+        </Routes>
     </div>
   );
 }
