@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react"
 import ComingSoonBanner from "../../Components/Banner/ComingSoonBanner";
 import kaart from "../../assets/kaart.png"
 import './style.scss'
 
 export default function ComingSoonPage() {
+    const [offsetY, setOffsetY] = useState(0)
+    const handleScroll = () => { setOffsetY(window.pageYOffset); };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => { window.removeEventListener('scroll', handleScroll)};
+    }, [])
+
     return (
         <>
         <ComingSoonBanner />
@@ -18,7 +27,7 @@ export default function ComingSoonPage() {
                     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div className="component_2 wrapper">
+            <div className="component_2 wrapper" style={{ transform: `translateY(${offsetY * -.75}px)` }}>
                 <div className="background_component_2" />
             </div>
         </section>
@@ -59,8 +68,8 @@ export default function ComingSoonPage() {
                         </div>
                     </div>
                 </div>
-                <div className="component_4 wrapper">
-                    <div className="background_component_4" />
+                <div className="component_4 wrapper" >
+                    <div className="background_component_4" style={{ height: `${offsetY / 3.5}px`}} />
                 </div>
                 <div className="component_5 wrapper">
                     <div className="background_component_5" />

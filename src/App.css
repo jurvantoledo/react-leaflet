@@ -10,6 +10,13 @@
   pointer-events: none;
 }
 
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   max-width: 1170px;
   margin: 0 auto;
