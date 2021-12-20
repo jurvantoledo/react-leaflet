@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import ComingSoonBanner from "../../Components/Banner/ComingSoonBanner";
 import kaart from "../../assets/kaart.png"
 import './style.scss'
 
 export default function ComingSoonPage() {
+    const myRef = useRef();
     const [offsetY, setOffsetY] = useState(0)
     const handleScroll = () => { setOffsetY(window.pageYOffset); };
 
@@ -15,8 +16,8 @@ export default function ComingSoonPage() {
 
     return (
         <>
-        <ComingSoonBanner />
-        <section className="coming-soon-1">
+        <ComingSoonBanner myRef={myRef} />
+        <section className="coming-soon-1" ref={myRef}>
         <div className="background_component_1" />
             <div className="container">
                 <h2>The Secret Garden</h2>

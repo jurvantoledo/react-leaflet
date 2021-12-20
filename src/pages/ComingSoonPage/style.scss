@@ -37,16 +37,16 @@
 // background 2 a.k.a bloem1
 .coming-soon-1 .component_2.wrapper {
     width: 500px;
-    height: 400px;
+    height: 800px;
     position: absolute;
     right: 0;
     overflow: hidden;
-    top: 0;
+    bottom: 0;
 }
 
 .coming-soon-1 .background_component_2 {
     width: 500px;
-    height: 400px;
+    height: 600px;
     position: absolute;
     background-image: url(../../assets/bloem1.png);
     z-index: 999;
