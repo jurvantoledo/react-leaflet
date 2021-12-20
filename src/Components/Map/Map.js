@@ -9,13 +9,16 @@ import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
-    shadowUrl: iconShadow
+    shadowUrl: iconShadow,
+    iconSize: [18, 26],
+    iconAnchor: [9, 26]
 });
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
 export default function SecretgardenMap() {
-    const position = [0.505, -0.09]
+    const position = [-48.205, -39.00]
+    const position2 = [-39.705, -9.50]
     const [bounds, setBounds] = useState([
         [5.712, -15.227],
         [5.774, -15.125]
@@ -39,7 +42,12 @@ export default function SecretgardenMap() {
             />
             <Marker position={position}>
                 <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    Kiwi tunnel
+                </Popup>
+            </Marker>
+            <Marker position={position2}>
+                <Popup>
+                    Poort
                 </Popup>
             </Marker>
         </MapContainer>
