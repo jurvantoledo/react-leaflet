@@ -29,7 +29,7 @@ export default function ComingSoonPage() {
                 </p>
             </div>
             <div className="component_2 wrapper" style={{ transform: `translateY(${offsetY * -.75}px)` }}>
-                <div className="background_component_2" />
+                <div className="background_component_2" style={{ transform: `rotate(${offsetY / -20}deg)`, right: `${offsetY * -.1}px` }} />
             </div>
         </section>
 
