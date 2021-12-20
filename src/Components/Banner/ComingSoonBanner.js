@@ -35,7 +35,7 @@ export default function ComingSoonBanner(props) {
         <div className="banner-text">
             <h1>Coming Soon</h1>
             <button onClick={scrollToBottom} 
-                style={{ background: 'transparent', border: 'none', color: '#fff', fontWeight: 'bold', fontSize: '1.8rem', position: 'absolute', right: '0', left: '0', margin: '0 auto', fontFamily: "Cormorant Infant" }}>
+                style={{ background: 'transparent', border: 'none', color: '#fff', fontWeight: 'bold', fontSize: '1.8rem', fontFamily: "Cormorant Infant" }}>
                 Scroll
             </button>
         </div>
