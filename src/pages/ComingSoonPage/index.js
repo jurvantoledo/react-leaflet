@@ -18,11 +18,6 @@ export default function ComingSoonPage() {
     return (
         <>
         <ComingSoonBanner myRef={myRef} />
-        <p>
-            <Link to={'/home'}>
-                Link naar homepage
-            </Link>
-        </p>
         <section className="coming-soon-1" ref={myRef}>
         <div className="background_component_1" />
             <div className="container">
