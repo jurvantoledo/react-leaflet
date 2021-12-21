@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import ComingSoonBanner from "../../Components/Banner/ComingSoonBanner";
 import kaart from "../../assets/kaart.png"
 import './style.scss'
-import Button from '@mui/material/Button';
+import Form from "../../Components/Form";
 
 export default function ComingSoonPage() {
     const myRef = useRef();
@@ -61,23 +61,9 @@ export default function ComingSoonPage() {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </p>
-                            <form>
-                                <div className="form-control">
-                                    <input />
-                                </div>
-                                <div className="form-control">
-                                    <input />
-                                </div>
-                                <div className="form-control">
-                                    <textarea style={{width: "100%", border: 'none' }}>
-                                    </textarea>
-                                </div>
-                                <div className="form-control">
-                                    <Button variant="contained">
-                                        Verzenden
-                                    </Button>
-                                </div>
-                            </form>
+                            <Form 
+                                variant="outlined"
+                            />
                         </div>
                     </div>
                 </div>

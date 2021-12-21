@@ -6,8 +6,8 @@ import './style.scss'
 export default function ScrollButton(props) {  
     return (
         <>
-        <Button className="scroll-down-btn" style={{ position: 'absolute', bottom: '0' }} variant="text" onClick={props.scrollToBottom}>
-                <Icon className='scroll-down-icon'>arrow_downward</Icon>
+        <Button className="scroll-dwn-btn" style={{ position: 'absolute', bottom: '0' }} variant="text" onClick={props.scrollToBottom}>
+                <Icon className='scroll-dwn-icon'>arrow_downward</Icon>
         </Button>
         </>
     )
