@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import ComingSoonBanner from "../../Components/Banner/ComingSoonBanner";
 import kaart from "../../assets/kaart.png"
 import './style.scss'
-import Form from "../../Components/Form";
+import Form from "./Form";
 
 export default function ComingSoonPage() {
     const myRef = useRef();
