@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react"
 import ComingSoonBanner from "../../Components/Banner/ComingSoonBanner";
 import kaart from "../../assets/kaart.png"
 import './style.scss'
-import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 export default function ComingSoonPage() {
     const myRef = useRef();
@@ -18,7 +18,7 @@ export default function ComingSoonPage() {
     return (
         <>
         <ComingSoonBanner myRef={myRef} />
-        <section className="coming-soon-1" ref={myRef}>
+        <section className="coming-soon-1" style={{ position: 'relative', paddingBottom: '225px' }} ref={myRef}>
         <div className="background_component_1" />
             <div className="container">
                 <h2>The Secret Garden</h2>
@@ -73,9 +73,9 @@ export default function ComingSoonPage() {
                                     </textarea>
                                 </div>
                                 <div className="form-control">
-                                    <button>
+                                    <Button variant="contained">
                                         Verzenden
-                                    </button>
+                                    </Button>
                                 </div>
                             </form>
                         </div>

@@ -1,22 +1,8 @@
-import React, { useRef, useState } from "react"
+import React from "react"
 import ScrollButton from "../ScrollButton";
 import './Banner.scss'
 
 export default function ComingSoonBanner(props) {
-    const [visible, setVisible] = useState(true);
-    const myRef = useRef();
-
-    const toggleVisible = () => {
-        const scrolled = document.documentElement.scrollTop;
-        if (scrolled > 0)
-        {
-            setVisible(false);
-        }
-        else {
-            setVisible(true);
-        }
-    }
-
     const scrollToBottom = () =>{ 
         window.scrollTo({ 
           top: props.myRef.current.offsetTop, 
@@ -34,11 +20,8 @@ export default function ComingSoonBanner(props) {
         >
         <div className="banner-text">
             <h1>Coming Soon</h1>
-            <button onClick={scrollToBottom} 
-                style={{ background: 'transparent', border: 'none', color: '#fff', fontWeight: 'bold', fontSize: '1.8rem', fontFamily: "Cormorant Infant" }}>
-                Scroll
-            </button>
         </div>
+        <ScrollButton scrollToBottom={scrollToBottom} />
         </div>
     )
 }

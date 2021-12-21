@@ -1,20 +1,14 @@
-import React, { useReducer } from 'react'
+import React from 'react'
+import Button from '@mui/material/Button';
+import Icon from '@mui/material/Icon';
+import './style.scss'
 
-export default function ScrollButton(props) {    
-    const scrollToBottom = () =>{ 
-        window.scrollTo({ 
-          top: props.myRef.current.offsetTop, 
-          behavior: 'smooth'
-          /* you can also use 'auto' behaviour 
-             in place of 'smooth' */
-        }); 
-      }; 
-
+export default function ScrollButton(props) {  
     return (
         <>
-            <button onClick={scrollToBottom}>
-                ^
-            </button>
+        <Button className="scroll-down-btn" style={{ position: 'absolute', bottom: '0' }} variant="text" onClick={props.scrollToBottom}>
+                <Icon className='scroll-down-icon'>arrow_downward</Icon>
+        </Button>
         </>
     )
 }
