@@ -1,6 +1,5 @@
 import React from 'react'
-import Button from '@mui/material/Button';
-import Icon from '@mui/material/Icon';
+import { Button, Icon } from '@material-ui/core';
 import './style.scss'
 
 export default function ScrollButton(props) {  
