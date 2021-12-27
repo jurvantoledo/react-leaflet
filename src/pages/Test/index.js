@@ -1,3 +1,4 @@
+import Button from "@mui/material/Button";
 import React from "react";
 import { Link } from "react-router-dom";
 import video from "../../assets/forest_video.mp4"
@@ -14,10 +15,10 @@ export default function TestPage() {
                     <source src={video} type="video/mp4"/>
                 </video>
                 <div className="parallax-button">
-                    <Link to={"/coming-soon"}>
-                        <button className="secretgarden-button">
+                    <Link to={"/"}>
+                        <Button variant="contained" color="success">
                             Enter the secret garden
-                        </button>
+                        </Button>
                     </Link>
                 </div>
             </div>
