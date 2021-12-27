@@ -21,7 +21,7 @@ export default function ComingSoonBanner(props) {
         <div className="banner-text">
             <h1>Coming Soon</h1>
         </div>
-        <ScrollButton scrollToBottom={scrollToBottom} />
+        <ScrollButton scroll={scrollToBottom} />
         </div>
     )
 }
