@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function Section(props) {
     return (
-        <div className={`section-${props.name}-${props.index}`}>
+        <section className={`section-${props.name}-page-${props.index}`}>
             <div className='container'>
                 <div className='content'>{props.children}</div>
             </div>
-        </div>
+        </section>
     )
 }

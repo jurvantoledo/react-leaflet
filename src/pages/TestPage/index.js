@@ -9,11 +9,11 @@ import './style.scss'
 export default function TestPage() {
     return (
         <>
-            <SectionWrapper>
-                <Section name='test'>
+            <SectionWrapper name='test'>
+                <Section>
                     Dit is section 1
                 </Section>
-                <Section name='test'>
+                <Section>
                     Dit is section 2
                 </Section>
             </SectionWrapper>
