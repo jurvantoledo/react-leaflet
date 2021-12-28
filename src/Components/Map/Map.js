@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { MapContainer, TileLayer } from "react-leaflet";
 import MapMarker from "./MapMarker";
 import "./Map.css"
@@ -15,17 +15,18 @@ export default function SecretgardenMap() {
         <MapContainer
             className="markercluster-map"
             center={[0.0, 0.0]}
-            maxZoom={5}
-            minZoom={2}
             zoom={0}
             continuousWorld={false}
             bounds={bounds}
+            // maxBounds={bounds}
             id="secretgarden V1"
             style={{backgroundColor: "#fff"}}
         >
             <TileLayer
                 url={`maps/images/{z}/{x}/{y}.jpg`}
                 noWrap={true}
+                maxZoom={5}
+                minZoom={2}
             />
             <MapMarker position={position} text='kiwi tunnel' />
             <MapMarker position={position2} text='poort' />
