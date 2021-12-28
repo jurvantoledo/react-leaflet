@@ -7,10 +7,10 @@ const useStyles = makeStyles(theme => ({
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'start',
-      padding: theme.spacing(2),
+      padding: theme.spacing(2, 0),
   
       '& .MuiTextField-root': {
-        margin: theme.spacing(1),
+        margin: theme.spacing(1, 0),
       },
       '& .MuiButtonBase-root': {
         margin: theme.spacing(2),
