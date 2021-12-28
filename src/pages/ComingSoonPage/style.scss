@@ -8,11 +8,11 @@
     }
 }
 
-.coming-soon-1 {
+.coming-soon-section-1 {
     position: relative;
 }
 
-.coming-soon-1 h2 {
+.coming-soon-section-1 h2 {
     color: #a8915d;
     font-size: 4rem;
     font-family: "Cormorant Infant";
@@ -20,7 +20,7 @@
 }
 
 // background 1 a.k.a radijs
-.coming-soon-1 .background_component_1 {
+.coming-soon-section-1 .background_component_1 {
     width: 600px;
     height: 600px;
     left: -75px;
@@ -34,7 +34,7 @@
 }
 
 // background 2 a.k.a bloem1
-.coming-soon-1 .component_2.wrapper {
+.coming-soon-section-1 .component_2.wrapper {
     width: 500px;
     height: 800px;
     position: absolute;
@@ -43,7 +43,7 @@
     bottom: 0;
 }
 
-.coming-soon-1 .background_component_2 {
+.coming-soon-section-1 .background_component_2 {
     width: 500px;
     height: 600px;
     position: absolute;
@@ -77,14 +77,14 @@
     }
 }
 
-.coming-soon-2 {
+.coming-soon-section-2 {
     padding: 100px 0;
     background-color: #eeefea;
     position: relative;
 }
 
 // background 3 a.k.a pompoen
-.coming-soon-2 .background_component_3 {
+.coming-soon-section-2 .background_component_3 {
     background-image: url(../../assets/pompoen.png);
     background-position: center center;
     background-size: cover;
@@ -103,31 +103,31 @@
 }
 
 // First child
-.coming-soon-2 .col-md-6:first-child img {
+.coming-soon-section-2 .col-md-6:first-child img {
     height: 500px;
     width: 325px;
     object-fit: cover;
 }
 
 // Last child
-.coming-soon-2 .col-md-6:last-child .text-col {
+.coming-soon-section-2 .col-md-6:last-child .text-col {
     padding-top: 15px;
     padding-right: 150px;
 }
 
-.coming-soon-2 .col-md-6:last-child h2 {
+.coming-soon-section-2 .col-md-6:last-child h2 {
     font-size: 3rem;
     color: #666797;
     font-family: "Cormorant Infant";
     margin: 0;
 }
 
-.coming-soon-2 .col-md-6:last-child form input {
+.coming-soon-section-2 .col-md-6:last-child form input {
     width: 100%;
     border: none;
 }
 
-.coming-soon-2 .col-md-6:last-child form button {
+.coming-soon-section-2 .col-md-6:last-child form button {
     padding: 7px 40px;
     background-color: #5b56b2;
     color: #fff;
@@ -138,7 +138,7 @@
 }
 
 // background 4 a.k.a bloem 2
-.coming-soon-2 .component_4.wrapper {
+.coming-soon-section-2 .component_4.wrapper {
     width: 500px;
     height: 560px;
     position: absolute;
@@ -147,7 +147,7 @@
     left: -45px;
 }
 
-.coming-soon-2 .background_component_4 {
+.coming-soon-section-2 .background_component_4 {
     background-image: url(../../assets/bloem2.png);
     background-position: center left;
     background-size: contain;
@@ -165,7 +165,7 @@
 @keyframes purpleFlowerAnimation {
     100% { -webkit-transform: rotate(360deg); }
 }
-.coming-soon-2 .component_5.wrapper {
+.coming-soon-section-2 .component_5.wrapper {
     width: 500px;
     height: 400px;
     position: absolute;
@@ -174,7 +174,7 @@
     right: 0;
 }
 
-.coming-soon-2 .background_component_5 {
+.coming-soon-section-2 .background_component_5 {
     background-image: url(../../assets/bloem3.png);
     background-position: center left;
     background-size: cover;

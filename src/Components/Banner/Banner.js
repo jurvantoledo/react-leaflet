@@ -15,11 +15,11 @@ export default function ComingSoonBanner(props) {
             className="banner" 
             id="banner"
             style={{
-                backgroundImage: "url(/resources/images/banners/coming_soon_banner.jpg)"
+                backgroundImage: props.image
             }}
         >
         <div className="banner-text">
-            <h1>Coming Soon</h1>
+            <h1>{props.title}</h1>
         </div>
         <ScrollButton scroll={scrollToBottom} />
         </div>
