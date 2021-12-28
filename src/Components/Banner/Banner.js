@@ -3,7 +3,8 @@ import ScrollButton from "../ScrollButton";
 import './Banner.scss'
 
 export default function ComingSoonBanner(props) {
-    const scrollToBottom = () =>{ 
+    // Scrolls to the section the ref is called on
+    const scrollToSection = () =>{ 
         window.scrollTo({ 
           top: props.myRef.current.offsetTop, 
           behavior: 'smooth'
@@ -21,7 +22,7 @@ export default function ComingSoonBanner(props) {
         <div className="banner-text">
             <h1>{props.title}</h1>
         </div>
-        <ScrollButton scroll={scrollToBottom} />
+        <ScrollButton scroll={scrollToSection} />
         </div>
     )
 }
