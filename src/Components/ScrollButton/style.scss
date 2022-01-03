@@ -1,9 +1,10 @@
-$color: #fff;
+$color: #000;
 
 .material-icons.scroll-dwn-icon {
     color: $color;
     font-size: 2rem;
     transition: .5s;
+    z-index: 999;
 }
 
 .material-icons.scroll-dwn-icon:hover {

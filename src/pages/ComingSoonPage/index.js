@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef, createRef } from "react"
-import ComingSoonBanner from "../../Components/Banner/Banner";
+import React, { useState, useEffect, createRef } from "react"
 import kaart from "../../assets/kaart.png"
 import './style.scss'
 import Section from "../../Layout/Section";
 import SectionWrapper from "../../Layout/Section/SectionWrapper";
 import Form from "./Form";
+import SecretgardenMap from "../../Components/Map/Map";
 
 export default function ComingSoonPage() {
     const myRef = createRef();
@@ -19,7 +19,7 @@ export default function ComingSoonPage() {
 
     return (
         <>
-            <ComingSoonBanner image="url(/resources/images/banners/coming_soon_banner.jpg)" title='Coming Soon' myRef={myRef} />
+            <SecretgardenMap myRef={myRef} />
             <SectionWrapper name='coming-soon'>
                 <Section style={{ position: 'relative', paddingBottom: '225px' }} ref={myRef}>
                 <div className="background_component_1" />

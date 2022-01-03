@@ -8,8 +8,8 @@ export default function ComingSoonBanner(props) {
         window.scrollTo({ 
           top: props.myRef.current.offsetTop, 
           behavior: 'smooth'
-        }); 
-      }; 
+        });
+      };
 
     return (
         <div 
@@ -23,7 +23,7 @@ export default function ComingSoonBanner(props) {
                 <h1>{props.title}</h1>
             </div>
 
-            <ScrollButton scroll={scrollToSection} />
+            <ScrollButton />
         </div>
     )
 }
