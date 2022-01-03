@@ -13,16 +13,17 @@ export default function ComingSoonBanner(props) {
 
     return (
         <div 
-            className="banner" 
+            className="banner"
             id="banner"
             style={{
                 backgroundImage: props.image
             }}
         >
-        <div className="banner-text">
-            <h1>{props.title}</h1>
-        </div>
-        <ScrollButton scroll={scrollToSection} />
+            <div className="banner-text">
+                <h1>{props.title}</h1>
+            </div>
+
+            <ScrollButton scroll={scrollToSection} />
         </div>
     )
 }
