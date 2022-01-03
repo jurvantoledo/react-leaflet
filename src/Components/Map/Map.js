@@ -54,7 +54,7 @@ export default function SecretgardenMap(props) {
             <MapBounds />
             <MapMarker position={position} text='kiwi tunnel' />
             <MapMarker position={position2} text='poort' />
-            <ScrollButton scroll={ScrollToSection} />
+            {/* <ScrollButton scroll={ScrollToSection} /> */}
         </MapContainer>
         </>
     )
