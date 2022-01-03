@@ -22,7 +22,7 @@ export default function ComingSoonPage() {
             <SecretgardenMap myRef={myRef} />
             <SectionWrapper name='coming-soon'>
                 <Section style={{ position: 'relative', paddingBottom: '225px' }} ref={myRef}>
-                <div className="background_component_1" />
+                {/* <div className="background_component_1" /> */}
                     <div className="container">
                         <h2>The Secret Garden</h2>
                         <p>
@@ -43,13 +43,13 @@ export default function ComingSoonPage() {
                             may even strengthen our connection to nature, inspire curiosity, and wonder, and, ultimately, joy. 
                         </p>
                     </div>
-                    <div className="component_2 wrapper" style={{ transform: `translateY(${offsetY * -.75}px)` }}>
+                    {/* <div className="component_2 wrapper" style={{ transform: `translateY(${offsetY * -.75}px)` }}>
                         <div className="background_component_2" style={{ transform: `rotate(${offsetY / -20}deg)`, right: `${offsetY * -.1}px` }} />
-                    </div>
+                    </div> */}
                 </Section>
 
                 <Section>
-                <div className="background_component_3" />
+                {/* <div className="background_component_3" /> */}
                     <div className="container">
                         <div className="row">
                             <div className="col-md-6">
@@ -70,12 +70,12 @@ export default function ComingSoonPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="component_4 wrapper" >
+                        {/* <div className="component_4 wrapper" >
                             <div className="background_component_4" style={{ height: `${offsetY / 3.5}px`}} />
                         </div>
                         <div className="component_5 wrapper">
                             <div className="background_component_5" />
-                        </div>
+                        </div> */}
                     </div>
                 </Section>
             </SectionWrapper>
