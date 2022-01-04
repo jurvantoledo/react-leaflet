@@ -1,16 +1,9 @@
 import React from "react"
 import ScrollButton from "../ScrollButton";
+import ScrollToSection from "../ScrollButton/ScrollToSection";
 import './Banner.scss'
 
 export default function Banner(props) {
-    // Scrolls to the section the ref is called on
-    const scrollToSection = () =>{ 
-        window.scrollTo({ 
-          top: props.myRef.current.offsetTop, 
-          behavior: 'smooth'
-        });
-      };
-
     return (
         <div 
             className="banner"
@@ -23,7 +16,7 @@ export default function Banner(props) {
                 <h1>{props.title}</h1>
             </div>
 
-            <ScrollButton scroll={scrollToSection} />
+            <ScrollButton onClick={() => ScrollToSection(props)} />
         </div>
     )
 }
