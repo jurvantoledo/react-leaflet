@@ -2,7 +2,7 @@ import React from "react"
 import ScrollButton from "../ScrollButton";
 import './Banner.scss'
 
-export default function ComingSoonBanner(props) {
+export default function Banner(props) {
     // Scrolls to the section the ref is called on
     const scrollToSection = () =>{ 
         window.scrollTo({ 
@@ -23,7 +23,7 @@ export default function ComingSoonBanner(props) {
                 <h1>{props.title}</h1>
             </div>
 
-            <ScrollButton />
+            <ScrollButton scroll={scrollToSection} />
         </div>
     )
 }

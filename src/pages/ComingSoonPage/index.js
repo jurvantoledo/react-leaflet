@@ -4,7 +4,7 @@ import './style.scss'
 import Section from "../../Layout/Section";
 import SectionWrapper from "../../Layout/Section/SectionWrapper";
 import Form from "./Form";
-import SecretgardenMap from "../../Components/Map/Map";
+import Banner from '../../Components/Banner'
 
 export default function ComingSoonPage() {
     const myRef = createRef();
@@ -19,7 +19,7 @@ export default function ComingSoonPage() {
 
     return (
         <>
-            <SecretgardenMap myRef={myRef} />
+            <Banner image="url(/resources/images/banners/banner.jpg)" title='Coming Soon' myRef={myRef} />
             <SectionWrapper name='coming-soon'>
                 <Section style={{ position: 'relative', paddingBottom: '225px' }} ref={myRef}>
                 {/* <div className="background_component_1" /> */}
