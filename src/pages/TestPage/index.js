@@ -7,38 +7,30 @@ export default function TestPage() {
     const [userInfo, setUserInfo] = useState({});
     const [isConneted, setIsConnected] = useState(false);
 
-    const detectCurrentProvider = () => {
+    const connectWallet = async () => {
         let provider;
         if (window.ethereum) {
             provider = window.ethereum.request({ method: "eth_requestAccounts" });
+            try {
+                // Returns a list of accounts.
+                const userAccount = await web3.eth.getAccounts();
+                // First account in index
+                const account = userAccount[0];
+                // Returns the chain ID of the current connected node
+                const chainId = web3.eth.getChainId();
+                // Returns the balance of current account
+                let ethBalance = await web3.eth.getBalance(account);
+                saveUserInfo(account, chainId, ethBalance);
+                if (userAccount.length === 0) {
+                    console.log('Please connect to Metamask');
+                }
+            } catch (error) {
+                console.log('There was an error fetching your accounts. Make sure your Ethereum client is configured correctly.');
+            }
         } else {
             console.log("Non-Ethereum browser detected. You should consider trying MetaMask!")
         }
         return provider;
-    }
-
-    const onConnect = async () => {
-        try {
-            const currentProvider = detectCurrentProvider();
-            console.log(currentProvider);
-            if (currentProvider !== web3.currentProvider) {
-                console.log("Non-Ethereum browser detected. You should consider trying MetaMask!")
-            }
-            // Returns a list of accounts.
-            const userAccount = await web3.eth.getAccounts();
-            // Returns the chain ID of the current connected node
-            const chainId = await web3.eth.getChainId();
-            // First account we found
-            const account = userAccount[0];
-            // Returns the balance of current account
-            let ethBalance = await web3.eth.getBalance(account);
-            saveUserInfo(account, chainId, ethBalance);
-            if (userAccount.length === 0) {
-                console.log('Please connect to Metamask');
-            }
-        } catch (error) {
-            console.log('There was an error fetching your accounts. Make sure your Ethereum client is configured correctly.');
-        }
     }
 
     const saveUserInfo = (account, chainId, ethBalance) => {
@@ -55,7 +47,6 @@ export default function TestPage() {
     }
 
     const onDisconnect = () => {
-        let provider;
         window.localStorage.removeItem('userAccount');
         setUserInfo({});
         setIsConnected(false);
@@ -64,18 +55,21 @@ export default function TestPage() {
     useEffect(() => {
         function checkConnectedWallet() {
             const userData = JSON.parse(localStorage.getItem('userAccount'));
-            if (userData !== null) {
+            if (userData) {
                 setUserInfo(userData);
                 setIsConnected(true);
+            } else {
+                setUserInfo({});
+                setIsConnected(false);
             }
         }
 
         checkConnectedWallet();
-    }, [])
+    }, [isConneted]);
     return (
         <div>
             {!isConneted ?
-                <Button color="error" variant="contained" onClick={onConnect}>
+                <Button color="error" variant="contained" onClick={connectWallet}>
                     Connect wallet
                 </Button> :
                 <Button color="success" variant="contained" onClick={onDisconnect}>
