@@ -1,11 +1,19 @@
 import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Web3 from "web3";
+import axios from "axios";
 
 export default function TestPage() {
     const web3 = new Web3(Web3.givenProvider || 'http://localhost:8545');
     const [userInfo, setUserInfo] = useState({});
     const [isConneted, setIsConnected] = useState(false);
+    const token = process.env.ETHERSCAN_API_TOKEN || "SYWW8F6JCRHTFC7FKUE7JF1SFCHTSZRWU7";
+
+    useEffect(() => {
+        fetch(`https://api.etherscan.io/api?module=account&action=tokennfttx&contractaddress=0x06012c8cf97bead5deae237070f9587f8e7a266d&address=${userInfo.account}&page=1&offset=100&startblock=0&endblock=27025780&sort=asc&apikey=${token}`)
+            .then(response => response.json())
+            .then(data => console.log(data));
+    }, [])
 
     const connectWallet = async () => {
         let provider;
