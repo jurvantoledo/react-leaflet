@@ -22,7 +22,7 @@ export default function ComingSoonPage() {
             <Banner image="url(/resources/images/banners/banner.jpg)" title='Coming Soon' myRef={myRef} />
             <SectionWrapper name='coming-soon'>
                 <Section style={{ position: 'relative', paddingBottom: '225px' }} ref={myRef}>
-                {/* <div className="background_component_1" /> */}
+                  <div className="background_component_1" />
                     <div className="container">
                         <h2>The Secret Garden</h2>
                         <p>
